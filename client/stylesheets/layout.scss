@@ -55,4 +55,14 @@ body {
 #sidebar-component {
   width: 20%;
   height: 90vh;
+
+  a {
+    display: block;
+    padding: 10px;
+  }
+
+  table {
+    padding: 10px;
+  }
+
 }

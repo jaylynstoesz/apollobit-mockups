@@ -2,6 +2,13 @@ App = React.createClass({
 
   mixins: [ReactMeteorData],
 
+  // getInitialState() {
+  //   console.log("***", this.props.currentPage);
+  //   return {
+  //     currentPage: this.props.currentPage
+  //   }
+  // },
+  //
   getMeteorData() {
     return {
       currentUser: Meteor.user()
@@ -13,9 +20,12 @@ App = React.createClass({
     return (
       <div>
         <Navbar
-        key={currentUser._id}
-        currentUser={currentUser} />
-        <Sidebar />
+          key={currentUser._id}
+          currentUser={currentUser}
+          activeTab={this.props.currentPage} />
+          {this.props.currentPage === "data-enlightenment" ? <DataEnlightenment /> : null}
+          {this.props.currentPage === "media-dashboard" ? <MediaDashboard /> : null}
+          {this.props.currentPage === "admin" ? <Admin /> : null}
       </div>
     )
   },

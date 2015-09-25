@@ -21,10 +21,18 @@ body {
 
 #navbar-component {
   background-color: $primary;
+  a {
+    color: $gray;
+  }
+}
+
+.active {
   color: $white;
 }
 
 #sidebar-component {
   background-color: $secondary;
-  color: $soft-black;
+  a {
+    color: $soft-black;
+  }
 }
