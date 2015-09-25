@@ -3,13 +3,19 @@ if (Meteor.isClient) {
     passwordSignupFields: "USERNAME_ONLY"
   })
 
-  Meteor.startup( function () {
-    React.render(<App />, document.getElementById('render-target'))
-  })
+  // Meteor.startup( function () {
+  //   React.render(<App />, document.getElementById('render-target'))
+  // })
 }
 
-if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
-  });
-}
+// if (Meteor.isServer) {
+//   Meteor.startup(function () {
+//     // code to run on server at startup
+//   });
+// }
+
+FlowRouter.route('/', {
+    action: function() {
+      React.render(<App />, document.getElementById('render-target'))
+    }
+});
