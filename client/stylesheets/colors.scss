@@ -1,0 +1,30 @@
+$primary: #009bdf;
+// light blue
+$secondary: #EBF6FA;
+// lightest blue-gray
+$accent: #0072b3;
+// medium blue
+$dark: #00508f;
+// dark blue
+$gray: #666;
+// dark gray
+$soft-black: #1D2426;
+// black
+$black: #000;
+// slightly darker black
+$white: #FFF;
+// pure white
+
+body {
+  color: $soft-black;
+}
+
+#navbar-component {
+  background-color: $primary;
+  color: $white;
+}
+
+#sidebar-component {
+  background-color: $secondary;
+  color: $soft-black;
+}

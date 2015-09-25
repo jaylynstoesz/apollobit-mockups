@@ -1,17 +1,58 @@
+$break-small: 320px;
+$break-large: 1200px;
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+}
+
 #navbar-component {
+  padding: 20px;
+  height: 35px;
+
+  img {
+    vertical-align: top;
+    height: 100%;
+  }
 
   ul {
     list-style-type: none;
     display: inline-block;
+    padding-top: 10px;
+    margin-top: 0;
   }
 
   li {
     display: inline-block;
-    padding: 10px;
+    padding-left: 20px;
+  }
+
+  #accounts-ui-component {
+    display: inline-block;
+  }
+
+  #profile-picture {
+    height: 30px;
+    border-radius: 50%;
   }
 
   #user-info {
+    height: 50%;
     float: right;
   }
 
+  #user-alerts {
+    display: inline-block;
+    padding-top: 5%;
+  }
+
+  #accounts-ui-component, #profile-picture, #user-alerts {
+    margin-right: 20px;
+  }
+
+}
+
+#sidebar-component {
+  width: 20%;
+  height: 90vh;
 }

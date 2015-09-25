@@ -10,9 +10,14 @@ App = React.createClass({
 
   renderPage() {
     const currentUser = this.data.currentUser
-    return <Navbar
-      key={currentUser._id}
-      currentUser={currentUser} />;
+    return (
+      <div>
+        <Navbar
+        key={currentUser._id}
+        currentUser={currentUser} />
+        <Sidebar />
+      </div>
+    )
   },
 
   render() {
