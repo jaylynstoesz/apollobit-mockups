@@ -50,7 +50,7 @@ DataConnDetail = React.createClass({
   render() {
     return (
       <div id="dataconn-detail-component">
-        <h1 className="page-header">Truths</h1>
+        <h1 className="page-header">Truth Details</h1>
         <form className="container">
           <div>
             <label htmlFor="enter-truth-name"><h3>Truth Name</h3></label>
