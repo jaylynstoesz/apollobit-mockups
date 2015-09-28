@@ -19,6 +19,14 @@ body {
   color: $soft-black;
 }
 
+thead {
+  background-color: $secondary;
+}
+
+tr {
+  border-bottom: 1px solid $secondary;
+}
+
 #navbar-component {
   background-color: $primary;
   a {
@@ -29,11 +37,20 @@ body {
   }
 }
 
-
 #sidebar-component {
   background-color: $secondary;
   a {
     color: $soft-black;
+  }
+}
+
+#dataconn-overview-component {
+  table, #truth-overview-table {
+    border: 1px solid $secondary;
+  }
+
+  td {
+    border-bottom: 1px solid $secondary;
   }
 }
 

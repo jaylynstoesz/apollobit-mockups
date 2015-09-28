@@ -35,7 +35,16 @@ a {
   text-decoration: none;
 }
 
+table {
+  font-size: 0.8em;
+}
+
+thead {
+  font-weight: 400;
+}
+
 #sidebar-component {
+  font-size: 1em;
   td:first-child {
     text-align: center;
   }
@@ -44,6 +53,11 @@ a {
   }
 }
 
+.truth-status {
+  text-align: center;
+  font-weight: 400;
+  font-size: 0.8em;
+}
 
 .page-header {
   font-weight: 300;

@@ -2,15 +2,6 @@ App = React.createClass({
 
   mixins: [ReactMeteorData],
 
-  // getInitialState() {
-  //   console.log("***", this.props.currentPage);
-  //   return {
-  //     currentPage: this.props.currentPage
-  //   }
-  // },
-  //
-
-
   getMeteorData() {
     return {
       currentUser: Meteor.user()

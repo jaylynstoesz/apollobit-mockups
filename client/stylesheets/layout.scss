@@ -53,6 +53,7 @@ body {
 }
 
 #sidebar-component {
+  float: left;
   display: inline-block;
   width: 20%;
   height: 90vh;
@@ -69,12 +70,18 @@ body {
 
 }
 
-#dec-content-component {
+#dataconn-overview-component {
   display: inline-block;
   vertical-align: top;
   padding: 50px;
   margin: 0px;
   width: 71%;
+
+  th, td {
+    text-align: left;
+    width: 10%;
+    padding: 1%;
+  }
 
   form {
     padding: 40px;
@@ -84,12 +91,25 @@ body {
     height: 200px;
   }
 
+  .truth-status {
+    border: 1px solid;
+    padding: 2px;
+    border-radius: 2px;
+  }
+
   #enter-truth-name {
     height: 30px;
     font-size: 15px;
     width: 50%;
     font-family: Lato;
     border-radius: 2px;
+  }
+
+  #truth-overview-table {
+    border-radius: 3px;
+    h3 {
+      padding-left: 20px;
+    }
   }
 
   dropdown {
