@@ -2,9 +2,9 @@ if (Meteor.isClient) {
   Accounts.ui.config({
     passwordSignupFields: "USERNAME_ONLY"
   })
-
+  // 
   // Meteor.startup( function () {
-  //   React.render(<App />, document.getElementById('render-target'))
+  //   React.render(<App currentPage="data-enlightenment" />, document.getElementById('render-target'))
   // })
 }
 
