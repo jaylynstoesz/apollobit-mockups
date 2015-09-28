@@ -24,15 +24,52 @@ body {
   a {
     color: $gray;
   }
+  .active {
+    color: $white;
+  }
 }
 
-.active {
-  color: $white;
-}
 
 #sidebar-component {
   background-color: $secondary;
   a {
     color: $soft-black;
   }
+}
+
+#dec-content-component {
+  form {
+    border: 2px solid $secondary;
+  }
+  dropdown label, dropdown ul li {
+    background-color: $white;
+    color: $soft-black;
+  }
+  dropdown label {
+    background-color: $white;
+    color: $soft-black;
+  }
+  dropdown input:checked + label {
+    background: $white;
+    color: $soft-black;
+  }
+
+  $colors: $primary, $accent, $dark;
+
+  @for $i from 1 through length($colors) {
+    dropdown ul li:nth-child(#{length($colors)}n+#{$i}) {
+      border-left: 4px solid nth($colors, $i);
+      .fa{
+        color: nth($colors, $i);
+      }
+      &:hover {
+          background: nth($colors, $i);
+          color: $white;
+        .fa{
+          color: $white;
+        }
+      }
+    }
+  }
+
 }

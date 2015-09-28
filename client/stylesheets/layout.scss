@@ -53,8 +53,10 @@ body {
 }
 
 #sidebar-component {
+  display: inline-block;
   width: 20%;
   height: 90vh;
+  padding: 0.5%;
 
   a {
     display: block;
@@ -62,7 +64,81 @@ body {
   }
 
   table {
-    padding: 10px;
+    width: 100%;
   }
 
+}
+
+#dec-content-component {
+  display: inline-block;
+  vertical-align: top;
+  padding: 50px;
+  margin: 0px;
+  width: 71%;
+
+  form {
+    padding: 40px;
+    padding-top: 0px;
+    margin-top: 40px;
+    z-index: 1;
+    height: 200px;
+  }
+
+  #enter-truth-name {
+    height: 30px;
+    font-size: 15px;
+    width: 50%;
+    font-family: Lato;
+    border-radius: 2px;
+  }
+
+  dropdown {
+    display: inline-block;
+    width: 100%;
+    display: block;
+    height: 300px;
+    overflow: scroll;
+  }
+  dropdown label, dropdown ul li {
+    display: block;
+    width: 50%;
+  }
+  dropdown ul li {
+    padding: 10px;
+    z-index: 2;
+  }
+  dropdown label:hover, dropdown ul li:hover {
+    cursor: pointer;
+  }
+  dropdown label {
+    position: relative;
+    z-index: 2;
+    padding: 10px;
+    padding-left: 0px;
+  }
+  dropdown input {
+    display: none;
+  }
+  dropdown input ~ ul {
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+    top: -20px;
+    z-index: 1;
+  }
+
+  dropdown input:checked ~ ul{
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+  }
+
+}
+
+.float-right{
+  float: right;
+}
+.fa{
+ font-size: .8em;
+  line-height: 22px !important;
 }

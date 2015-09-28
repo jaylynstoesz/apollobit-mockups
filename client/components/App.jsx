@@ -9,6 +9,8 @@ App = React.createClass({
   //   }
   // },
   //
+
+
   getMeteorData() {
     return {
       currentUser: Meteor.user()
