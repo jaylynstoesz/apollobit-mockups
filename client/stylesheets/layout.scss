@@ -6,6 +6,18 @@ body {
   margin: 0;
 }
 
+.fa-remove, .fa-gear {
+  padding: 5px;
+}
+
+.fa-edit, .fa-remove, .fa-gear {
+  cursor: pointer;
+}
+
+.container {
+  padding: 20px;
+}
+
 #navbar-component {
   padding: 20px;
   height: 35px;
@@ -70,7 +82,7 @@ body {
 
 }
 
-#dataconn-overview-component {
+#dataconn-overview-component, #dataconn-detail-component {
   display: inline-block;
   vertical-align: top;
   padding: 50px;
@@ -83,8 +95,12 @@ body {
     padding: 1%;
   }
 
+  td.icons, th.icons {
+    width: 4%;
+  }
+
   form {
-    padding: 40px;
+    padding: 20px;
     padding-top: 0px;
     margin-top: 40px;
     z-index: 1;

@@ -6,6 +6,8 @@ $accent: #0072b3;
 // medium blue
 $dark: #00508f;
 // dark blue
+$red: #b12b3f;
+// maroon red
 $gray: #666;
 // dark gray
 $soft-black: #1D2426;
@@ -27,6 +29,22 @@ tr {
   border-bottom: 1px solid $secondary;
 }
 
+.container {
+  border: 2px solid $secondary;
+}
+
+.fa-edit {
+  color: $primary;
+}
+
+.fa-gear {
+  color: $gray;
+}
+
+.fa-remove {
+  color: $red;
+}
+
 #navbar-component {
   background-color: $primary;
   a {
@@ -44,7 +62,7 @@ tr {
   }
 }
 
-#dataconn-overview-component {
+#dataconn-overview-component, #dataconn-detail-component {
   table, #truth-overview-table {
     border: 1px solid $secondary;
   }
@@ -54,39 +72,33 @@ tr {
   }
 }
 
-#dec-content-component {
-  form {
-    border: 2px solid $secondary;
-  }
-  dropdown label, dropdown ul li {
-    background-color: $white;
-    color: $soft-black;
-  }
-  dropdown label {
-    background-color: $white;
-    color: $soft-black;
-  }
-  dropdown input:checked + label {
-    background: $white;
-    color: $soft-black;
-  }
+dropdown label, dropdown ul li {
+  background-color: $white;
+  color: $soft-black;
+}
+dropdown label {
+  background-color: $white;
+  color: $soft-black;
+}
+dropdown input:checked + label {
+  background: $white;
+  color: $soft-black;
+}
 
-  $colors: $primary, $accent, $dark;
+$colors: $primary, $accent, $dark;
 
-  @for $i from 1 through length($colors) {
-    dropdown ul li:nth-child(#{length($colors)}n+#{$i}) {
-      border-left: 4px solid nth($colors, $i);
+@for $i from 1 through length($colors) {
+  dropdown ul li:nth-child(#{length($colors)}n+#{$i}) {
+    border-left: 4px solid nth($colors, $i);
+    .fa{
+      color: nth($colors, $i);
+    }
+    &:hover {
+        background: nth($colors, $i);
+        color: $white;
       .fa{
-        color: nth($colors, $i);
-      }
-      &:hover {
-          background: nth($colors, $i);
-          color: $white;
-        .fa{
-          color: $white;
-        }
+        color: $white;
       }
     }
   }
-
 }

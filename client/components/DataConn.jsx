@@ -7,8 +7,7 @@ DataConn = React.createClass({
   },
 
   handleClick() {
-      console.log("clicked!");
-      this.state.overview ? this.setState({overview : false}) : this.setState({overview : true})
+    this.state.overview ? this.setState({overview : false}) : this.setState({overview : true})
   },
 
   render() {

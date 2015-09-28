@@ -89,7 +89,7 @@ DataConnOverview = React.createClass({
        var style = {
          color: statusColors[truth.status]
        }
-       return <tr key={truth.id} onClick={this.props.handleClick}>
+       return <tr key={truth.id}>
                 <td>{truth.name}</td>
                 <td>{truth.type}</td>
                 <td>{truth.totalFieldCount}</td>
@@ -98,6 +98,7 @@ DataConnOverview = React.createClass({
                 <td>{truth.totalInclusionaryFields}</td>
                 <td>{truth.lastBuildDate}</td>
                 <td><div className="truth-status" style={style}>{truth.status.toUpperCase()}</div></td>
+                <td className="icons"><span className="fa fa-edit" onClick={this.props.handleClick}></span></td>
               </tr>
             })
    },
@@ -106,7 +107,7 @@ DataConnOverview = React.createClass({
     return (
       <div id="dataconn-overview-component">
         <h1 className="page-header">Truth: Define / Create / Link </h1>
-        <div id="truth-overview-table">
+        <div className="container" id="truth-overview-table">
         <h3>Truth Views</h3>
           <table>
             <tr>
@@ -120,6 +121,7 @@ DataConnOverview = React.createClass({
                   <th>Number of Inlcusionary Fields</th>
                   <th>Last Refresh</th>
                   <th>Status</th>
+                  <th className="icons"></th>
                 </tr>
               </thead>
               <tbody>
